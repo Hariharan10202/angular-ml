@@ -1,0 +1,32 @@
+<section>
+  <div class="background"></div>
+  <div class="container">
+    <div>
+      <h1>Enter the details</h1>
+    </div>
+    <div>
+      <div class="left">
+        <label class="upload-label" for="fileUpload">
+          <span class="material-symbols-outlined"> upload_file </span>
+          <span>Upload CSV file</span>
+        </label>
+        <input class="upload-input" type="file" id="fileUpload" />
+      </div>
+      <div class="right">
+        <mat-form-field appearance="fill">
+          <mat-label>Duration</mat-label>
+          <mat-select>
+            <mat-option
+              *ngFor="let duration of durations"
+              [value]="duration.value"
+            >
+              {{ duration.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <input type="number" placeholder="Enter a integer value" />
+      </div>
+    </div>
+    <div><button>Submit</button></div>
+  </div>
+</section>
